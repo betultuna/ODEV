@@ -1,0 +1,16 @@
+C:\Users\STUDENT2\ODEV\calisma06\bin\Debug\net5.0\calisma06.exe
+C:\Users\STUDENT2\ODEV\calisma06\bin\Debug\net5.0\calisma06.deps.json
+C:\Users\STUDENT2\ODEV\calisma06\bin\Debug\net5.0\calisma06.runtimeconfig.json
+C:\Users\STUDENT2\ODEV\calisma06\bin\Debug\net5.0\calisma06.runtimeconfig.dev.json
+C:\Users\STUDENT2\ODEV\calisma06\bin\Debug\net5.0\calisma06.dll
+C:\Users\STUDENT2\ODEV\calisma06\bin\Debug\net5.0\ref\calisma06.dll
+C:\Users\STUDENT2\ODEV\calisma06\bin\Debug\net5.0\calisma06.pdb
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\calisma06.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\calisma06.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\calisma06.AssemblyInfoInputs.cache
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\calisma06.AssemblyInfo.cs
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\calisma06.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\calisma06.dll
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\ref\calisma06.dll
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\calisma06.pdb
+C:\Users\STUDENT2\ODEV\calisma06\obj\Debug\net5.0\calisma06.genruntimeconfig.cache

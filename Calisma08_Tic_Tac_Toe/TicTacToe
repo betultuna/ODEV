@@ -1,0 +1,90 @@
+========================================================
+================== GENEL BAKIŞ =========================
+========================================================
+
+State Enum
+==========
+tek bir karenin olabileceği durumları listeleyen numaralandırma: 
+X, O ve Kararsız (boş). 
+
+Position Sınıfı
+===============
+Satır ve Sütun özelliklerine sahip tahta (Board) üzerinde bir konumu temsil etmek için kullanılabilecek basit bir sınıf 
+
+Board Sınıfı
+===============
+Bu sınıf, bir bütün olarak oyun için temel, merkezi veri yapısıdır. Tahtadaki bir pozisyonun mevcut durumunu ve tahtaya yeni bir değer yerleştirmeyi talep etme yolları ile birlikte, tahtayı temsil etmek için 3x3'lük bir Durum (State) değerleri dizisi içerir. 
+
+Herhangi bir anda, sıranın kimde olduğu ve yalnızca doğru oyuncunun sırasının olduğundan emin olunan uygulama.
+
+Player Sınıfı
+===============
+Oyuncudan gelen girdiyi üzerinde oynamak için bir tahta (Board) pozisyonuna (Position) çevirmek için tasarlanmış bir sınıf. 
+
+WinChecker Sınıfı
+=================
+Bu sınıf, bir tahtayı analiz etme ve bir oyuncu için henüz bir galibiyetle sonuçlanıp sonuçlanmadığını belirleme sorumluluğuna sahiptir. Ayrıca oyunun bir beraberliğe ulaşıp ulaşmadığını gösteren bir metotu var.
+
+Renderer Sınıfı
+=============== 
+Bu sınıf, bittiğinde oyunun nihai sonuçlarını görüntülemek de dahil olmak üzere oyunun mevcut durumunu çizme sorumluluğuna sahiptir.
+
+Board sınıfının da bunu yapan bir yöntemi olabilir, ancak kodun diğer herhangi bir bölümünü etkilemeden işleme mekanizmasını (belki bir GUI için) değiştirebilmek için ayrı bir sınıf olmasında fayda var.
+
+Program
+=======
+İhtiyacımız olan son parça, tüm diğer sınıflardan işleyen bir oyun oluşturabilecek ve çalışmasını sağlamak için hepsini birbirine bağlayabilecek bir şey. Bu, teknik olarak başka bir sınıfta yapılabilecek bir mantıktır, ancak bu özel durumda, bunu varsayılan Program sınıfındaki Main yönteminde yapılabilir.
+
+================================================================
+================== AYRINTILI TASARIM ===========================
+================================================================
+
+Board
+=========
+Bu sınıfın merkezinde, State[,] değişkeni yer alıyor. Diğer her şey bunun üzerine inşa edilmiş. NextTurn, sıranın kimin olacağını belirliyor. 
+
+Sistemin diğer bölümlerinin tahtanın mevcut durumuna ulaşması ve doğrudan manipüle etmesi istenilmediği için, tahtadaki herhangi bir noktanın durumu için Getter ve Setter metotları yer alıyor.
+
+Bu iş için Property kullanılabilirdi, ama tahtada hangi pozisyonun sorulduğunu bilmek gerekiyor. Property'ler böyle bir parametre kullanmaya imakn vermiyor. Bu yüzden ayrıca  Getter/Setter gibi çalışan ve parametre olarak konum (Position) alan metotlar kullanılıyor.
+
+SetState metotu biraz zor. Eğer sıranın dışına çıkılırsa reddeder. Zaten doldurulmuş bir karede oynamaya çalışılırsa reddeder. Sadece yeni durumu (State) ayarlamanın yanı sıra, bu metot aynı zamanda bir sonraki turu (turn) diğer oyuncuya çevirdiğinden emin olunmasını sağlar. 
+
+WinChecker sınıfı
+================= 
+(a) X veya O'nun kazanıp kazanmadığını ve 
+(b) tahtanın dolu olup olmadığını ve berabere sonuçlanıp sonuçlanmadığını belirleme mantığına sahiptir:
+
+Bu kod göründüğü kadar kötü değil. Bunun büyük bir kısmı, satırlar, sütunlar ve ardından köşegenler boyunca bir kazanıma ulaşılıp ulaşılmadığını kontrol ediyor. 
+
+Bu aynı mantık hem X hem de O için yeniden kullanılır, bu nedenle her oyuncu için Check (Kontrol) metotundan çağrılır. 
+
+Alttaki IsDraw yöntemi, tahtanın henüz berabere olup olmadığını hesaplar. Dolu olmayan tek bir hücre bulabilirsek beraberlik olmaması olarak tanımlanır. Yapamazsak bu berabere olur.
+
+Renderer Sınıfı
+===============
+Bunda iki Public metot ve bir yardımcı metot var. 
+Render, ekrandaki her yuva için hangi sembollerin kullanılması gerektiğine dair 3x3'lük bir dizi oluşturur, ardından tahtayı çizmek için string enterpolasyonu kullanır. 
+
+RenderResults sadece kimin kazandığını yazdırır. 
+Her ikisi de SymbolFor yardımcı program yöntemini kullanır.
+SymbolFor, basitçe bir durumu bir karaktere dönüştürür. 
+
+Bu metot, X ve O sembollerini yalnızca tek bir yerde değiştirerek kullanmayı sağlıyor. (Örneğin, X'ler ve O'lar yerine 1'ler ve 0'lar oynayabiliriz.)
+
+Player Class 
+============
+Özetle, kullanıcıdan bir sayı alır (kötü girişi yok sayar) ve ardından bir rakamı bir Konum (Position) objesine dönüştürür.
+
+Konumlar, klavyedeki sayısal tuş takımı gibi düzenlenmiştir.
+
+Program 
+=======
+İlk satır bloğu oyunun parçalarını oluşturur: 
+bir tahta, 
+bir kazanma denetleyicisi, 
+bir oluşturucu ve iki oyuncu. 
+
+İkinci parça, oyunumuzu harekete geçiren “oyun döngüsü”. 
+Tahtayı çizer, mevcut oyuncudan hamle ister ve tahtayı günceller. 
+
+Oyun berabere veya biri için kazanıldığında, döngü sona erer, sonuçlar görüntülenir ve program sona erer. 

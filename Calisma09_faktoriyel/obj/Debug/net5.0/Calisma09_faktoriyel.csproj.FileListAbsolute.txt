@@ -1,0 +1,16 @@
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\Calisma09_faktoriyel.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\Calisma09_faktoriyel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\Calisma09_faktoriyel.AssemblyInfoInputs.cache
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\Calisma09_faktoriyel.AssemblyInfo.cs
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\Calisma09_faktoriyel.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\bin\Debug\net5.0\Calisma09_faktoriyel.exe
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\bin\Debug\net5.0\Calisma09_faktoriyel.deps.json
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\bin\Debug\net5.0\Calisma09_faktoriyel.runtimeconfig.json
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\bin\Debug\net5.0\Calisma09_faktoriyel.runtimeconfig.dev.json
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\bin\Debug\net5.0\Calisma09_faktoriyel.dll
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\bin\Debug\net5.0\Calisma09_faktoriyel.pdb
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\Calisma09_faktoriyel.dll
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\refint\Calisma09_faktoriyel.dll
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\Calisma09_faktoriyel.pdb
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\Calisma09_faktoriyel.genruntimeconfig.cache
+C:\Users\STUDENT2\ODEV\Calisma09_faktoriyel\obj\Debug\net5.0\ref\Calisma09_faktoriyel.dll
